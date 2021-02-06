@@ -509,6 +509,7 @@ nav
     display: block;
     justify-content: center;
     overflow: hidden;
+    padding: 5% 0;
 }
 
 .box-three #first-div h1
