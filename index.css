@@ -679,10 +679,11 @@ nav
     margin:  0 !important;
     opacity: 0;
     transition: all 0.2s linear;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)); */
     display: flex;
     justify-content: center;
     align-items: center;
+    /* color: black; */
 }
 
 #work .container .row .cover h1
@@ -696,8 +697,14 @@ nav
 {
     grid-row: 1/3;
     grid-column: 3/7;
-    background-image: url("images/Work/img2.jpg");
+    background-image: url("images/Work/img5.jpg");
 
+}
+
+#work .container .boxtwo .cover h1
+{
+    font-size: 5rem !important;
+    color:black;
 }
 
 #work .container .boxthree
