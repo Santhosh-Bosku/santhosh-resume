@@ -884,11 +884,6 @@ nav
         margin: -2px 0 0 0;
     }
 
-    #deatils h1
-    {
-        width: 80%;
-    }
-
     .box-three .col
     {
         background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
@@ -929,6 +924,7 @@ nav
 
     #details h1
     {
+        width: 80% !important;
         text-indent: 0px !important;
         margin-left: 8%;
         font-size: 1.8rem;
@@ -1039,6 +1035,11 @@ nav
     #work .container .row .cover
     {
         opacity: 1 !important;
+    }
+
+    #work .container .boxtwo .cover h1
+    {
+        font-size: 2rem !important;
     }
     
  }
