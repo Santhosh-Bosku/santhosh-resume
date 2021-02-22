@@ -1024,5 +1024,15 @@ nav
         transition: transform 0.3s ease-in-out;
 
     }
+
+    #work .container .row
+    {
+        filter: none !important;
+    }
+
+    #work .container .row .cover
+    {
+        opacity: 1 !important;
+    }
     
  }
