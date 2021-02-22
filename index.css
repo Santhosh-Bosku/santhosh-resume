@@ -752,8 +752,6 @@ nav
 
 }
 
-/* @media only screen and (min-height: ) */
-
 /************************************** Resposive code here  *************************************/
 
 @media only screen and (min-width: 280px) and (max-width: 770px)
@@ -775,13 +773,13 @@ nav
         top: 4vh;
     }
 
-    header #label div
+    header #label #bar-one, #bar-two
     {
         width: 8VW;
         height: 1.5vw;
-        background-color:black;
+        background-color:rgb(53, 52, 52);
         margin: 3px auto 5px auto ;
-        border-radius: 25px;
+        border-radius: 25px !important;
         transition: 0.3s ease-in-out;
 
     }
@@ -795,12 +793,12 @@ nav
         transition:  all 0.1s linear;
     }
 
-    #mo:checked~nav #label .bar-one
+    #mo:checked~nav #label #bar-one
     {
         transform: rotate(45deg)translateY(6px);
         transition: 0.3s ease-in-out;
     }
-    #mo:checked~nav #label .bar-two
+    #mo:checked~nav #label #bar-two
     {
         transform: rotate(-45deg)translateY(-6px);
         transition: 0.3s ease-in-out;
@@ -892,8 +890,12 @@ nav
 
     .box-three #first-div
     {
-        background-image: linear-gradient(rgba(255,  255,255,0),rgba(255, 255, 255, 0),rgba(255,255,255,0),rgba(0, 0, 0, 0.219),rgba(0, 0, 0, 0.473),rgba(0, 0, 0, 0.76),rgb(0, 0, 0));
-        padding: 100% 0 0 0;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        background-image: linear-gradient(rgba(255,255,255,0),rgba(255, 255, 255, 0),rgba(255,255,255,0),rgba(0, 0, 0, 0.219),rgba(0, 0, 0, 0.473),rgba(0, 0, 0, 0.76),rgb(0, 0, 0));
+        padding: 0 0 10% 0;
         position: relative;
     }
 
@@ -953,7 +955,8 @@ nav
         z-index: 999;
         display: block !important;
         right: 0;
-        top: 40%;
+        top: 0;
+        bottom: 0;
     }
 
     #res-social-media ul
