@@ -377,12 +377,12 @@ nav
 
 ::-webkit-scrollbar-thumb
 {
-    background-image: linear-gradient(rgba(129, 129, 129, 0.397),rgba(143, 142, 142, 0.9));
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0));
 }
 
 ::-webkit-scrollbar-track
 {
-    box-shadow: inset 0 0 3px rgb(0, 0, 0);
+    background-color: rgb(131, 131, 131);
     border-radius: 10px;
 }
 
@@ -428,8 +428,6 @@ nav
   
   transform: translateX(220PX);
   transition: transform 0.3s ease-in-out;
-  color: linear-gradient();
-
 }
 
 .fa-instagram {
@@ -763,24 +761,66 @@ nav
     nav
     {
         width: 18vw !important;
+        position: relative;
     }
 
-    .burger-nav #mo
+    header #label
     {
         display: block !important;
+        position: absolute;
+        z-index: 999;
+        color: rgb(255, 0, 0);
+        left: 0;
+        right: 0;
+        top: 4vh;
     }
 
-    #mo:checked~.burger-nav ul li label
+    header #label div
     {
-        color: red;
-        display: block !important;
-        pos
+        width: 8VW;
+        height: 1.5vw;
+        background-color:black;
+        margin: 3px auto 5px auto ;
+        border-radius: 25px;
+        transition: 0.3s ease-in-out;
+
+    }
+
+
+    .burger-nav
+    {
+        z-index: 998;
+        transform: translateX(-100% );
+        background-color: black;
+        transition:  all 0.1s linear;
+    }
+
+    #mo:checked~nav #label .bar-one
+    {
+        transform: rotate(45deg)translateY(6px);
+        transition: 0.3s ease-in-out;
+    }
+    #mo:checked~nav #label .bar-two
+    {
+        transform: rotate(-45deg)translateY(-6px);
+        transition: 0.3s ease-in-out;
+    }
+    #mo:checked~nav #label div
+    {
+        background-color: white;
+    }
+
+    #mo:checked~nav .burger-nav
+    {
+        transform: translateX(0);
+        transition:  all 0.1s linear;
+        /* display: none !important; */
     }
 
     #mo:checked~.burger-nav
     {
-        /* transform: translateX(10px); */
-        /* display: none; */
+        transform: translateX(10px);
+        z-index: 998 !important;
     }
 
     .fas, .far
@@ -887,7 +927,7 @@ nav
         align-items: center;
     }
 
-    #res-social-media ul li a
+    #res-social-media ul li a i
     {
         display: inline-block;
         margin: 0 auto;
@@ -906,12 +946,12 @@ nav
         /* transform: translateX(340px); */
         /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); */
         padding: 20% 0 0 0;
-        transition: transform 0.3s ease-in-out;
     }
 
     .fa-instagram
     {
-        font-size: 2rem !important;
+        transform: none !important;
+        font-size:  !important;
         background: -webkit-gradient(linear, left top, left bottom, from(#7d1ac9), to(#f39406)) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
@@ -942,17 +982,4 @@ nav
 
     }
 
-    #res-social-media ul li a:hover
-    {
-        animation: anim 0.2s;
-        animation-iteration-count: 1;
-    }
-
-    @keyframes anim
-    {
-        0%{transform: translateX(10px);}
-        30%{transform: translateX(0px);}
-        60%{transform: translateX(-10px);}
-        100%{transform: translateX(0px);}
-    }
-}
+ }
