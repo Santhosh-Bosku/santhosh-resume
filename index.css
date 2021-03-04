@@ -904,6 +904,7 @@ nav
     {
         grid-row: 1/2;
         grid-column: 1/7;
+        overflow-x: hidden;
     }
 
     #work .container .boxtwo
